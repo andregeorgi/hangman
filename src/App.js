@@ -13,6 +13,7 @@ function App() {
   function handleClickPlayer1() {
     setUpdatedPlayer1(namePlayer1);
     setNamePlayer1("");
+    //asdas
   }
 
   function handleClickPlayer2() {
