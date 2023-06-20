@@ -33,3 +33,7 @@ code {
 .textfield-css {
   padding-right: 20px;
 }
+
+.btn-height {
+  height: 54px;
+}

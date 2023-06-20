@@ -22,70 +22,80 @@ function App() {
 
   return (
     <div>
-      {/* {isFirstStep ? ( */}
-      <div>
-        <h2 className="center-text">First setup</h2>
-        <div className="row">
-          <div className="column">
-            <h2>Name</h2>
-            <TextField
-              id="outlined-basic"
-              label="Outlined"
-              variant="outlined"
-              value={namePlayer1}
-              onChange={(event) => {
-                setNamePlayer1(event.target.value);
-              }}
-            />
-            <Button variant="contained" onClick={handleClickPlayer1}>
+      {isFirstStep ? (
+        <div>
+          <h2 className="center-text">First setup</h2>
+          <div className="row">
+            <div className="column">
+              <h2>Name</h2>
+              <TextField
+                id="outlined-basic"
+                label="Outlined"
+                variant="outlined"
+                value={namePlayer1}
+                onChange={(event) => {
+                  setNamePlayer1(event.target.value);
+                }}
+              />
+              <Button
+                variant="contained"
+                onClick={handleClickPlayer1}
+                className="btn-height"
+              >
+                Submit
+              </Button>
+            </div>
+            <div className="column">
+              <h2>Name</h2>
+              <TextField
+                id="outlined-basic"
+                label="Outlined"
+                variant="outlined"
+                value={namePlayer2}
+                onChange={(event) => {
+                  setNamePlayer2(event.target.value);
+                }}
+              />
+              <Button
+                variant="contained"
+                onClick={handleClickPlayer2}
+                className="btn-height"
+              >
+                Submit
+              </Button>
+            </div>
+          </div>
+
+          <h2 className="center-text">Game</h2>
+          <div className="row">
+            <div className="column">
+              <label>{updatePlayer1}</label>
+            </div>
+            <div className="column">
+              <label>{updatePlayer2}</label>
+            </div>
+          </div>
+          <br></br>
+          <br></br>
+          <div className="center-text">
+            <TextField id="outlined-basic" label="Answer" variant="outlined" />
+            <Button variant="contained" className="btn-height">
               Submit
             </Button>
           </div>
-          <div className="column">
-            <h2>Name</h2>
-            <TextField
-              id="outlined-basic"
-              label="Outlined"
-              variant="outlined"
-              value={namePlayer2}
-              onChange={(event) => {
-                setNamePlayer2(event.target.value);
-              }}
-            />
-            <Button variant="contained" onClick={handleClickPlayer2}>
+          <div className="center-text">
+            <TextField id="outlined-basic" label="Letter" variant="outlined" />
+            <Button variant="contained" className="btn-height">
               Submit
             </Button>
           </div>
         </div>
-
-        <h2 className="center-text">Game</h2>
-        <div className="row">
-          <div className="column">
-            <label>{updatePlayer1}</label>
-          </div>
-          <div className="column">
-            <label>{updatePlayer2}</label>
-          </div>
-        </div>
-        <br></br>
-        <br></br>
-        <div className="center-text">
-          <TextField id="outlined-basic" label="Answer" variant="outlined" />
-          <Button variant="contained">Submit</Button>
-        </div>
-        <div className="center-text">
-          <TextField id="outlined-basic" label="Letter" variant="outlined" />
-          <Button variant="contained">Submit</Button>
-        </div>
-      </div>
-
-      {/* ) : (
+      ) : (
         <div>
           <h2 className="center-text">Game</h2>
           <InputLabel value={updated}></InputLabel>
         </div>
-      )
-      } */}
+      )}
     </div>
   );
 }
