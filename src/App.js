@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 
 const dictionary = ["laptop", "monitor", "mouse"];
 var stringOpt = "";
@@ -177,6 +184,35 @@ function App() {
             >
               Submit
             </Button>
+          </div>
+          <div>
+            <h2 className="center-text">Statistics</h2>
+            <TableContainer component={Paper}>
+              <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Index</TableCell>
+                    <TableCell align="right">Valid</TableCell>
+                    <TableCell align="right">Letter</TableCell>
+                    <TableCell align="right">Date</TableCell>
+                    <TableCell align="right">Name</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow>
+                    <TableCell component="th" scope="row">
+                      {}
+                    </TableCell>
+                    <TableCell align="right">{}</TableCell>
+                    <TableCell align="right">{}</TableCell>
+                    <TableCell align="right">
+                      {new Date().toLocaleString().split(" ")[1]}
+                    </TableCell>
+                    <TableCell align="right">{namePlayer1}</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
           </div>
         </div>
       )}
