@@ -84,7 +84,7 @@ function App() {
     <div>
       {isFirstStep ? (
         <div>
-          <h2 className="center-text">First setup</h2>
+          <h2 className="center-text">Welcome to the game</h2>
           <div className="row">
             <div className="column">
               <h2>Name Player 1</h2>
@@ -187,32 +187,34 @@ function App() {
           </div>
           <div>
             <h2 className="center-text">Statistics</h2>
-            <TableContainer component={Paper}>
-              <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Index</TableCell>
-                    <TableCell align="right">Valid</TableCell>
-                    <TableCell align="right">Letter</TableCell>
-                    <TableCell align="right">Date</TableCell>
-                    <TableCell align="right">Name</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  <TableRow>
-                    <TableCell component="th" scope="row">
-                      {}
-                    </TableCell>
-                    <TableCell align="right">{}</TableCell>
-                    <TableCell align="right">{}</TableCell>
-                    <TableCell align="right">
-                      {new Date().toLocaleString().split(" ")[1]}
-                    </TableCell>
-                    <TableCell align="right">{namePlayer1}</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </TableContainer>
+            <div className="table-beautify">
+              <TableContainer component={Paper}>
+                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell>Index</TableCell>
+                      <TableCell align="right">Valid</TableCell>
+                      <TableCell align="right">Letter</TableCell>
+                      <TableCell align="right">Date</TableCell>
+                      <TableCell align="right">Name</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell component="th" scope="row">
+                        {}
+                      </TableCell>
+                      <TableCell align="right">{}</TableCell>
+                      <TableCell align="right">{}</TableCell>
+                      <TableCell align="right">
+                        {new Date().toLocaleString().split(" ")[1]}
+                      </TableCell>
+                      <TableCell align="right">{namePlayer1}</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </div>
           </div>
         </div>
       )}
