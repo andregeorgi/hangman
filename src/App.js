@@ -132,7 +132,7 @@ function App() {
           <h3 className="center-text">{word}</h3>
           <div className="row">
             <div className="column">
-              <label>{updatePlayer1}</label>
+              <h3>Player 1: {updatePlayer1}</h3>
               <table>
                 <tbody>
                   <tr>
@@ -144,7 +144,7 @@ function App() {
               </table>
             </div>
             <div className="column">
-              <label>{updatePlayer2}</label>
+              <h3>Player 2: {updatePlayer2}</h3>
             </div>
           </div>
           <br></br>
