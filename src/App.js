@@ -128,7 +128,7 @@ function App() {
         </div>
       ) : (
         <div>
-          <h2 className="center-text">Game</h2>
+          <h2 className="center-text">Hidden word</h2>
           <h3 className="center-text">{word}</h3>
           <div className="row">
             <div className="column">
@@ -152,24 +152,6 @@ function App() {
           <div className="center-text">
             <TextField
               id="outlined-basic"
-              label="Answer"
-              variant="outlined"
-              onChange={(event) => {
-                setAnswer(event.target.value);
-              }}
-              value={answer}
-            />
-            <Button
-              variant="contained"
-              onClick={handleAnswerClick}
-              className="btn-height"
-            >
-              Submit
-            </Button>
-          </div>
-          <div className="center-text">
-            <TextField
-              id="outlined-basic"
               label="Letter"
               variant="outlined"
               onChange={(event) => {
@@ -185,6 +167,25 @@ function App() {
               Submit
             </Button>
           </div>
+          <div className="center-text">
+            <TextField
+              id="outlined-basic"
+              label="Answer"
+              variant="outlined"
+              onChange={(event) => {
+                setAnswer(event.target.value);
+              }}
+              value={answer}
+            />
+            <Button
+              variant="contained"
+              onClick={handleAnswerClick}
+              className="btn-height"
+            >
+              Submit
+            </Button>
+          </div>
+
           <div>
             <h2 className="center-text">Statistics</h2>
             <div className="table-beautify">

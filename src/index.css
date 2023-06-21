@@ -42,3 +42,7 @@ code {
   width: 70% !important;
   margin-left: 200px;
 }
+
+.margin-right {
+  margin-right: 10px;
+}
